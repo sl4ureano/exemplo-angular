@@ -1,0 +1,36 @@
+<div class="main-container">
+  <ul>
+    <!-- Botão para escolher data -->
+    <li>
+      <button (click)="openPaymentDateModal()">Escolher data de pagamento</button>
+    </li>
+
+    <!-- Botão para escolher parcelas -->
+    <li>
+      <button (click)="openInstallmentModal()">Escolher parcelas</button>
+    </li>
+  </ul>
+
+  <!-- Exibição do valor total -->
+  <div class="total-container">
+    <p>Total a pagar: {{ totalAmount | currency }}</p>
+    <button (click)="continue()">Continuar</button>
+  </div>
+
+  <!-- Modal de escolha de data -->
+  <app-payment-date-modal
+    *ngIf="showPaymentDateModal"
+    [holidays]="holidays"
+    (selectedDate)="handleDateSelection($event)"
+  ></app-payment-date-modal>
+
+  <!-- Modal de escolha de parcelas -->
+  <app-installment-modal
+    *ngIf="showInstallmentModal"
+    [installments]="installments"
+    (selectedInstallments)="handleInstallmentsSelection($event)"
+  ></app-installment-modal>
+
+  <h1>selectedDate: {{selectedDate}}</h1>
+  <h1>selectedInstallments: {{selectedInstallments | json}}</h1>
+</div>

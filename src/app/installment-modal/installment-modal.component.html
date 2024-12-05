@@ -1,0 +1,36 @@
+<div class="modal">
+  <h3>Escolha o número de parcelas para pagar</h3>
+
+  <!-- Opção de pagar 1 parcela -->
+  <div>
+    <input
+      type="radio"
+      id="one-parcel"
+      name="installments"
+      [value]="1"
+      (change)="selectInstallmentOption(1)"
+    />
+    <label for="one-parcel">
+      1 Parcela: {{ installments[0]?.month }} - {{ installments[0]?.value | currency }}
+    </label>
+  </div>
+
+  <!-- Opção de pagar 2 parcelas -->
+  <div *ngIf="installments.length > 1">
+    <input
+      type="radio"
+      id="two-parcels"
+      name="installments"
+      [value]="2"
+      (change)="selectInstallmentOption(2)"
+    />
+    <label for="two-parcels">
+      2 Parcelas: 
+      {{ installments[0]?.month }} - {{ installments[0]?.value | currency }} e 
+      {{ installments[1]?.month }} - {{ installments[1]?.value | currency }}
+    </label>
+  </div>
+
+  <!-- Botão para confirmar a escolha -->
+  <button [disabled]="!selectedOption" (click)="confirmSelection()">Confirmar</button>
+</div>

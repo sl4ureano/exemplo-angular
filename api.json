@@ -1,0 +1,12 @@
+{
+    "holidays": [
+      { "id": 1, "date": "2024-12-04" },
+      { "id": 2, "date": "2024-12-05" },
+      { "id": 2, "date": "2024-12-06" }
+    ],
+    "installments": [
+      { "id": 1, "month": "December", "value": 100 },
+      { "id": 2, "month": "January", "value": 150 }
+    ]
+  }
+  

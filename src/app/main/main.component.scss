@@ -1,0 +1,48 @@
+.main-container {
+    padding: 16px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 16px;
+  }
+  
+  button {
+    padding: 10px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .total-container {
+    margin-top: 24px;
+    text-align: center;
+  }
+  
+  .total-container p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .total-container button {
+    margin-top: 16px;
+    padding: 10px 24px;
+    background-color: #28a745;
+  }
+  
+  .total-container button:hover {
+    background-color: #218838;
+  }
+  
